@@ -1,4 +1,5 @@
 const assert = require('chai').assert;
+const fs = require('fs');
 
 describe('buffer read', function() {
   it ('reads buffer from file', function(done) {
@@ -6,5 +7,5 @@ describe('buffer read', function() {
       assert(buffer instanceof Buffer);
       done(err);
     });
-  }
+  });
 });
