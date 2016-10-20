@@ -1,0 +1,31 @@
+{
+  "name": "bitmap-transformer",
+  "version": "1.0.0",
+  "description": "Bitmap color transformer",
+  "main": "bitmap-xfmr.js",
+  "scripts": {
+    "lint": "eslint **/*.js",
+    "pretest": "npm run lint",
+    "test": "mocha",
+    "build": "npm install",
+    "dev": "npm install --save-dev",
+    "watch": "npm run test -- -w",
+    "start": "node ./lib/bitmap-xfmr.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markgreenwood/bitmap-transformer.git"
+  },
+  "author": "@markgreenwood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markgreenwood/bitmap-transformer/issues"
+  },
+  "homepage": "https://github.com/markgreenwood/bitmap-transformer#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.8.1",
+    "mocha": "^3.1.2",
+  },
+  "dependencies": {}
+}
