@@ -4,11 +4,13 @@ const fs = require('fs');
 const bm = require('../lib/bitmap-xfmr.js');
 
 const filetypes = ['BM', 'BA', 'CI', 'CP', 'IC', 'PT'];
+let buffer;
 
 describe('buffer read', function() {
 
   it ('reads buffer from file', function(done) {
     fs.readFile('palette-bitmap.bmp', (err, buffer) => {
+      console.log(buffer);
       assert(buffer instanceof Buffer);
       done(err);
     });
