@@ -19,6 +19,15 @@ Transform the bitmap where label is one of the available transforms:
  - 'invert' inverts the colors in the image (i.e. new_color = 255 - old_color)
  - 'grayscale' makes the image grayer by a specified factor
 
+Example:
+
+```
+myBmp.transform('redder', 3);
+myBmp.writeBufferToFile('images/redder3.bmp', (err) => {
+  console.log(err || 'Done!'); 
+});
+```
+
 ### Save to file
 
 ```myBmp.writeBufferToFile(filename, [callback(err, data)])```
