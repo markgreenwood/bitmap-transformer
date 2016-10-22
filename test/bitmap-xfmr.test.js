@@ -1,36 +1,11 @@
 const assert = require('chai').assert;
-// const expect = require('chai').expect;
 const fs = require('fs');
 const Bitmap = require('../lib/bitmap-xfmr');
-
-// const filetypes = ['BM', 'BA', 'CI', 'CP', 'IC', 'PT'];
-
-describe('buffer read', function() {
-
-  it ('reads buffer from file', function(done) {
-    fs.readFile('palette-bitmap.bmp', (err, buffer) => {
-      // console.log(buffer);
-      assert(buffer instanceof Buffer);
-      done(err);
-    });
-  });
-
-});
-
-describe('Bitmap constructor', function() {
-
-  it('constructs an empty Bitmap object and throws error if you try to use it before reading a file', function() {
-    // let testBmp = new Bitmap();
-    // expect(testBmp.transform('redder', 2)).to.throw(Error);
-  });
-
-});
 
 describe('Bitmap constructor with palette bitmap', function() {
 
   let myBmp;
   before(function(done) {
-    // TODO: convert to async constructor
     myBmp = new Bitmap('palette-bitmap.bmp', done);
   });
 
@@ -52,7 +27,6 @@ describe('Bitmap constructor with non-palette bitmap', function() {
 
   let myBmp;
   before(function(done) {
-    // TODO: convert to async constructor
     myBmp = new Bitmap('non-palette-bitmap.bmp', done);
   });
 
@@ -106,7 +80,6 @@ describe('palette invertColors transform', function() {
 
   let myBmp;
   before(function(done) {
-    // TODO: convert to async constructor
     myBmp = new Bitmap('palette-bitmap.bmp', done);
   });
 
@@ -131,7 +104,6 @@ describe('palette redder x3 transform', function() {
 
   let myBmp;
   before(function(done) {
-    // TODO: convert to async constructor
     myBmp = new Bitmap('palette-bitmap.bmp', done);
   });
 
@@ -148,7 +120,6 @@ describe('palette bluer x2 transform', function() {
 
   let myBmp;
   before(function(done) {
-    // TODO: convert to async constructor
     myBmp = new Bitmap('palette-bitmap.bmp', done);
   });
 
@@ -165,7 +136,6 @@ describe('non-palette greener x3 transform', function() {
 
   let myBmp;
   before(function(done) {
-    // TODO: convert to async constructor
     myBmp = new Bitmap('non-palette-bitmap.bmp', done);
   });
 
