@@ -112,3 +112,19 @@ describe('palette redder x3 transform', function() {
   });
 
 });
+
+describe('updateBufferImageData', function() {
+
+  let myBmp;
+  before(function() {
+    myBmp = new Bitmap('non-palette-bitmap.bmp');
+  });
+
+  it('doesn\'t corrupt file when called on unmodified image data', function() {
+    let ref_buffer = fs.readFileSync('non-palette-bitmap.bmp');
+    myBmp.updateBufferImageData();
+    let actual = myBmp.buffer;
+    assert.deepEqual(actual, ref_buffer);
+  });
+  
+});
