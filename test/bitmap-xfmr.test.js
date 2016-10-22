@@ -179,11 +179,11 @@ describe('non-palette greener x3 transform', function() {
 });
 
 describe('non-palette invertColors transform', function() {
-
+  this.timeout(5000);
+  
   let myBmp;
   before(function(done) {
-    // TODO: convert to async constructor
-    myBmp = new Bitmap('non-palette-bitmap.bmp', done);
+    myBmp = new Bitmap('non-palette-bitmap.bmp', (err) => { done(err); });
   });
 
   it('inverts the color table', function() {
