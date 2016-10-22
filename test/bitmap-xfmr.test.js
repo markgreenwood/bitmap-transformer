@@ -21,6 +21,7 @@ describe('Bitmap constructor', function() {
 
   let myBmp;
   before(function() {
+    // TODO: convert to async constructor
     myBmp = new Bitmap('palette-bitmap.bmp');
   });
 
@@ -42,6 +43,7 @@ describe('invertColors transform', function() {
 
   let myBmp;
   before(function() {
+    // TODO: convert to async constructor
     myBmp = new Bitmap('palette-bitmap.bmp');
   });
 
