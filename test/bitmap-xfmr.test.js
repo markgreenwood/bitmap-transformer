@@ -46,10 +46,10 @@ describe('invertColors transform', function() {
   });
 
   it('inverts the color table', function() {
-    let initColorTbl = myBmp.getColorTable();
+    let initColorTbl = myBmp.copyColorTable();
     myBmp.invertColors();
-    let actual = myBmp.getColorTable();
-    let expected = initColorTbl.forEach(function(color) {
+    let actual = myBmp.copyColorTable();
+    let expected = initColorTbl.map(function(color) {
       return {
         red: 255 - color.red,
         blue: 255 - color.blue,
