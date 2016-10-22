@@ -53,11 +53,10 @@ describe('invertColors transform', function() {
       return {
         red: 255 - color.red,
         blue: 255 - color.blue,
-        green: 255 - color.green
+        green: 255 - color.green,
+        alpha: color.alpha
       };
     });
-    console.log('actual: ', actual);
-    console.log('expected: ', expected);
     assert.deepEqual(actual, expected);
   });
 
