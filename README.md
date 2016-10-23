@@ -17,10 +17,6 @@ myBmp.writeBufferToFile('images/example-redder3.bmp', (err) => { console.log(err
 
 This was written as a lab assignment for Code Fellows 401 class. Currently it supports paletted and non-paletted bitmaps in the standard Windows NT/3.1+ BITMAPINFOHEADER format.
 
-## Installation
-
-Provide code examples and explanations of how to get the project.
-
 ## API Reference
 
 ### Constructor
@@ -45,7 +41,7 @@ Example:
 ```
 myBmp.transform('redder', 3);
 myBmp.writeBufferToFile('images/redder3.bmp', (err) => {
-  console.log(err || 'Done!'); 
+  console.log(err || 'Done!');
 });
 ```
 
